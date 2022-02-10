@@ -17,7 +17,7 @@ function App() {
     <div className="app">
       <h1>Hi there!</h1>
       <Button onClick={togglePHandler}>Show P</Button>
-      <Demo show={showP}/>
+      <Demo show={false}/>
     </div>
   );
 }
