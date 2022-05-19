@@ -7,10 +7,10 @@ import Comments from '../components/comments/Comments';
 import HighlightedQuote from '../components/quotes/HighlightedQuote';
 import LoadingSpinner from '../components/UI/LoadingSpinner';
 
-const DUMMY_QUOTES = [
-  { id: 'q1', author: 'Max', text: 'Learn react'},
-  { id: 'q2', author: 'Max2', text: 'Learn react 2'},
-];
+// const DUMMY_QUOTES = [
+//   { id: 'q1', author: 'Max', text: 'Learn react'},
+//   { id: 'q2', author: 'Max2', text: 'Learn react 2'},
+// ];
 
 const QuoteDetail = () => {
   const match = useRouteMatch();
