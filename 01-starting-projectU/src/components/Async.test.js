@@ -9,6 +9,5 @@ describe('Async component', () => {
       const listItemElements = await screen.findAllByRole('listitem');
       expect(listItemElements).not.toHaveLength(0);
     }, 3000)
-    
   });
 });
