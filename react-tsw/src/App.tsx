@@ -1,14 +1,27 @@
+import { useState } from 'react';
+import NewTodo from './components/NewTodo';
 import Todos from './components/Todos';
-
-const items = [
-  'react',
-  'typescript'
-]
+import Todo from './models/todo';
 
 function App() {
+  const [todos, setTodos] = useState<Todo[]>([]);
+
+  const addTodoHandler = (text: string): void => {
+    setTodos((previousTodos) => {
+      return [new Todo(text), ...previousTodos]
+    });
+  };
+
+  const removeTodoHandler = (id: string): void => {
+    setTodos((previousTodos) => {
+      return previousTodos.filter((todo) => todo.id !== id)
+    });
+  };
+
   return (
     <div>
-      <Todos items={items}/>
+      <NewTodo onAddTodo={addTodoHandler}/>
+      <Todos items={todos} onRemoveTodo={removeTodoHandler}/>
     </div>
   );
 }
